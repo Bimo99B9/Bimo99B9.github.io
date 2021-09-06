@@ -16,13 +16,13 @@ minimal_mistakes_skin    : "haxor" # "air", "aqua", "contrast", "dark", "dirt", 
 
 # Site Settings
 locale                   : "en-US"
-title                    : "snowscan.io"
+title                    : "Bimo99B9.io"
 title_separator          : "-"
 name                     : "Snowscan"
 description              : "Posts about security, CTFs and networking"
-url                      : "https://snowscan.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://Bimo99B9.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "slemire/slemire.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "Bimo99B9/Bimo99B9.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 logo                     : "/assets/images/masthead.png"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 breadcrumbs              : true # true, false (default)
@@ -101,11 +101,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Snowscan"
+  name             : "Bimo99B9"
   avatar           : "/assets/images/avatar.png"
-  bio              : "Pentester, CTF player<br>HackTheBox ATeam"
-  location         : "Canada"
-  email            : "info@snowscan.io"
+  bio              : "Pentester, CTF player<br>Computer engineering and data science student"
+  location         : "Spain"
+  email            : "danilopezgala@gmail.com"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
@@ -114,19 +114,19 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "slemire"
+  github           : "Bimo99B9"
   gitlab           :
   google_plus      :
-  keybase          : "snowscan"
-  instagram        :
+  keybase          : "Bimo99B9"
+  instagram        : "Bimo99B9"
   lastfm           :
-  linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  linkedin         : "daniel-lópez-gala-b7982316b"
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          : "snowscan"
+  twitter          : "Bimo99B9"
   vine             :
   weibo            :
   xing             :
