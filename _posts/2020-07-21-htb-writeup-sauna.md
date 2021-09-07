@@ -5,7 +5,7 @@ excerpt: "Delivery is a quick and fun easy box where we have to create a MatterM
 date: 2020-07-21
 classes: wide
 header:
-  teaser: /assets/images/htb-writeup-sauna/sauna_logo.png
+  teaser: /assets/images/htb-writeup-sauna/sauna_logo.jpg
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
