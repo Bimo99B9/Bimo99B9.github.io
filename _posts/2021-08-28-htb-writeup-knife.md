@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Knife - Hack The Box
-excerpt: "The Knife machine of HackTheBox is an easy Linux machine very useful to understand basic concepts about enumeration, and how to stablish a simple reverse shell. It is also helpful to understand the escalation of privileges using Gtfobins."
+excerpt: "The Knife machine of HackTheBox is an easy Linux machine very useful to understand basic concepts about enumeration, and how to stablish a simple reverse shell. It is also helpful to understand the escalation of privileges using GTFObins."
 date: 2021-08-28
 classes: wide
 header:
