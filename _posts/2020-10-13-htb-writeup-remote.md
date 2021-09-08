@@ -2,7 +2,7 @@
 layout: single
 title: Sauna - Hack The Box
 excerpt: "Sauna is a very complete Windows machine, in which some of the most common tools are used to gain access and escalate privileges in the system. The enumeration requires making a list of possible usernames using the about page of the website. In the privilege escalation, the Pass-The-Hash technique is used to become administrator, which makes the machine interesting at the same time that it is easy and enjoyable to start with Windows pentesting."
-date: 2020-07-21
+date: 2020-10-13
 classes: wide
 header:
   teaser: /assets/images/htb-writeup-remote/remote_logo.jpg
