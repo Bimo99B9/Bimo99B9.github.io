@@ -10,6 +10,7 @@ header:
   icon: /assets/images/hackthebox.webp
 categories:
   - hackthebox
+  - easy
   - infosec
 tags:  
   - Windows
