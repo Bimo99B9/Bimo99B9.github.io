@@ -1,7 +1,7 @@
 ---
 layout: single
-title: Sauna - Hack The Box
-excerpt: "Sauna is a very complete Windows machine, in which some of the most common tools are used to gain access and escalate privileges in the system. The enumeration requires making a list of possible usernames using the about page of the website. In the privilege escalation, the Pass-The-Hash technique is used to become administrator, which makes the machine interesting at the same time that it is easy and enjoyable to start with Windows pentesting."
+title: Remote - Hack The Box
+excerpt: "Remote is a Windows machine with the Umbraco web content manager, which is exploited through a mountable partition and cached credentials whose greatest vulnerability is an outdated version of Umbraco, what makes possible to exploit the machine."
 date: 2020-10-13
 classes: wide
 header:
