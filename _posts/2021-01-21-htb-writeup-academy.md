@@ -20,7 +20,7 @@ tags:
   - burpsuite
 ---
 
-![](/assets/images/htb-writeup-academy/academy-logo.png)
+![](/assets/images/htb-writeup-academy/academy_logo.jpg)
 
 Academy is a very complete Linux machine about the new HackTheBox Academy platform, which covers enumeration with directory lists, virtual hosting, Laravel exploitation,  a lot of lateral movement and privilege escalation with composer.
 
