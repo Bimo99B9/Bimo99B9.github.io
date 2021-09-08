@@ -1,121 +1,82 @@
 ---
 layout: single
-title: Sauna - Hack The Box
-excerpt: "Sauna is a very complete Windows machine, in which some of the most common tools are used to gain access and escalate privileges in the system. The enumeration requires making a list of possible usernames using the about page of the website. In the privilege escalation, the Pass-The-Hash technique is used to become administrator, which makes the machine interesting at the same time that it is easy and enjoyable to start with Windows pentesting."
-date: 2020-07-21
+title: Tabby - Hack The Box
+excerpt: "Tabby is an easy and enjoyable Linux machine with an LFI to get the foothold, lateral movement from tomcat and an abuse of the lxd group privilege."
+date: 2020-10-15
 classes: wide
 header:
-  teaser: /assets/images/htb-writeup-remote/remote_logo.jpg
+  teaser: /assets/images/htb-writeup-tabby/tabby_logo.jpg
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
   - hackthebox
   - infosec
 tags:  
-  - Windows
-  - umbraco
-  - msfvenom
-  - teamviewer
-  - evil-winrm
+  - Linux
+  - tomcat
+  - lfi
+  - lxd
+  - fcrackzip
 ---
 
-![](/assets/images/htb-writeup-remote/remote_logo.jpg)
+![](/assets/images/htb-writeup-tabby/tabby_logo.jpg)
 
-Remote is a Windows machine with the Umbraco web content manager, which is exploited through a mountable partition and cached credentials whose greatest vulnerability is an outdated version of Umbraco, what makes possible to exploit the machine.
+Tabby is an easy and enjoyable Linux machine with an LFI to get the foothold, lateral movement from tomcat and an abuse of the lxd group privilege.
 
 ## Portscan
 
-![](/assets/images/htb-writeup-remote/remote1.png)
+![](/assets/images/htb-writeup-tabby/tabby1.png)
 
 ## Foothold
 
-Using the script `nfs-showmount` of nmap, we discover a mountable folder `/site_backups`
+We have only 3 open ports. SSH, HTTP and HTTPS. The HTTPS one, 8080, is a Tomcat website that asks for credentials.
 
-![](/assets/images/htb-writeup-remote/remote2.png)
+![](/assets/images/htb-writeup-tabby/tabby2.png)
 
-When we mount the folder, we have the files of a backup of what it seems to be an Umbraco site.
+In the HTTP website, there is a page vulnerable to LFI, as it receives a parameter in the URL indicating the file to read, and does not sanitize the input, so we can read the /etc/passwd file and find **ash** and **tomcat** users.
 
-![](/assets/images/htb-writeup-remote/remote3.png)
+![](/assets/images/htb-writeup-tabby/tabby3.png)
 
-In the `/App_Data/` folder, there is one of the key files in an Umbraco system: `Umbraco.sdf`.
+We know that tomcat is running in another port, so it is possible to read the configuration file with the Local File Inclusion, and get the credentials.
 
-![](/assets/images/htb-writeup-remote/remote6.png)
+![](/assets/images/htb-writeup-tabby/tabby4.png)
 
-If we filter the word `admin` in that file, we find a SHA-1 hash.
+## Tomcat War Deployer
 
-![](/assets/images/htb-writeup-remote/remote7.png)
+With valid tomcat credentials, we can upload a payload and execute it to get a reverse shell. In the case of tomcat, this can be easily done with the [Tomcat War Deployer Script](https://github.com/mgeeky/tomcatWarDeployer).
 
-Decrypted, this hash was a password of the admin user, which we will use later.
+![](/assets/images/htb-writeup-tabby/tabby5.png)
 
-![](/assets/images/htb-writeup-remote/remote9.png)
+## Lateral movement
 
-## Website
+Enumerating the files in the system we find a zipped backup.
 
-The website is an umbraco login page, without register option, so some credentials are needed to log in the site. (As SQL injections are not working in any of the parameters.)
+![](/assets/images/htb-writeup-tabby/tabby9.png)
 
-![](/assets/images/htb-writeup-remote/remote5.png)
+We can copy this zip to our local machine to unzip it there.
 
-In the `Web.config` file of the mounted folder, we can see that the used version is `7.12.4`.
+![](/assets/images/htb-writeup-tabby/tabby10.png)
 
-![](/assets/images/htb-writeup-remote/remote4.png)
+With fcrackzip we easily find that the password is `admin@it`, so we don't need to extract the hash and use john or hashcat.
 
-That version is vulnerable to RCE (Authenticated), exploit that we can use as we now have valid credentials.
+![](/assets/images/htb-writeup-tabby/tabby12.png)
 
-![](/assets/images/htb-writeup-remote/remote10.png)
+## Privilege escalation
 
-Then, we clone the repository and install the Python requirements.
+As the found credential is the one that the user `ash` uses, we can log in to the machine as `ash` and get the user flag.
 
-![](/assets/images/htb-writeup-remote/remote11.png)
+If we execute the command `id` we will see that we are member of the group lxd, which is a vulnerability that we can use to escalate privileges. (See `searchsploit lxd`).
 
-If we login to the website with the credentials that we have, we will see an option to upload files to the web. With a bit of testing, we can see that the server doesn't check the file that you upload.
+Then, the steps are:
 
-![](/assets/images/htb-writeup-remote/remote13.png)
+* Clone the alpine container image from the repository
 
-## Reverse shell
+![](/assets/images/htb-writeup-tabby/tabby13.png)
 
-With that known, we can create a .exe payload using msfvenom, which we will upload and then use our RCE exploit to execute it and gain access to the machine.
+* Move it to the victim machine, starting a python server in your machine `python3 -m http.server 8000`.
 
-![](/assets/images/htb-writeup-remote/remote12.png)
+![](/assets/images/htb-writeup-tabby/tabby14.png)
 
-Now, we upload the file to the web.
+* Execute the payload, and get the root flag.
 
-![](/assets/images/htb-writeup-remote/remote14.png)
-
-Then, we test that we have RCE in the machine with our exploit, and use it to find in the directories the path of our uploaded payload.
-
-![](/assets/images/htb-writeup-remote/remote15.png)
-
-The path of the file is `C:/inetpub/wwwroot/Media/1034/hello.exe`. We can execute it with the powershell.
-
-![](/assets/images/htb-writeup-remote/remote19.png)
-
-This time we will use metasploit to stablish the reverse shell, as it could be useful later to have our shell in this environment.
-
-![](/assets/images/htb-writeup-remote/remote20.png)
-
-With the command `shell`, the reverse shell is launched and we now have access to the system.
-
-![](/assets/images/htb-writeup-remote/remote21.png)
-
-At this point the user.txt flag can be taken.
-
-![](/assets/images/htb-writeup-remote/remote22.png)
-
-## System enumeration
-
-We will be enumerating the system via Winpeas. To run it we will upload it as we did with the payload before.
-
-![](/assets/images/htb-writeup-remote/remote26.png)
-
-In the enumeration we find that TeamViewer Version 7 is installed in the machine.
-
-![](/assets/images/htb-writeup-remote/remote27.png)
-
-TeamViewer is vulnerable as we can get the cached credentials with metasploit, and the passwords may be the same that the privileged user of the system.
-
-![](/assets/images/htb-writeup-remote/remote28.png)
-
-As we now have a user `Administrator` and a password `!R3m0te!`, we can log in to the machine using evil-winrm and take the root.txt flag.
-
-![](/assets/images/htb-writeup-remote/remote29.png)
-
+![](/assets/images/htb-writeup-tabby/tabby15.png)
