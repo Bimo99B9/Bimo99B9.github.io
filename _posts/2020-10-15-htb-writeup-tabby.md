@@ -1,11 +1,11 @@
 ---
 layout: single
 title: Tabby - Hack The Box
-excerpt: "Tabby is an easy and enjoyable Linux machine with an LFI to get the foothold, lateral movement from tomcat and an abuse of the lxd group privilege."
+excerpt: "Tabby is an easy and enjoyable Linux machine with an LFI to get the foothold, user pivoting from tomcat and an abuse of the lxd group privilege."
 date: 2020-10-15
 classes: wide
 header:
-  teaser: /assets/images/htb-writeup-tabby/tabby_logo.jpg
+  teaser: /assets/images/htb-writeup-tabby/tabby_logo.png
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
@@ -19,7 +19,7 @@ tags:
   - fcrackzip
 ---
 
-![](/assets/images/htb-writeup-tabby/tabby_logo.jpg)
+![](/assets/images/htb-writeup-tabby/tabby_logo.png)
 
 Tabby is an easy and enjoyable Linux machine with an LFI to get the foothold, lateral movement from tomcat and an abuse of the lxd group privilege.
 
