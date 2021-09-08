@@ -21,7 +21,7 @@ tags:
 
 ![](/assets/images/htb-writeup-knife/knife_logo.png)
 
-The Knife machine of HackTheBox is an easy Linux machine very useful to understand basic concepts about enumeration, and how to stablish a simple reverse shell. It is also helpful to understand the escalation of privileges using Gtfobins.
+This is a test
 
 ## Nmap
 
