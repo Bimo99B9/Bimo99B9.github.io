@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Sauna - Hack The Box
+title: Love - Hack The Box
 excerpt: ""
 date: 2021-08-07
 classes: wide
