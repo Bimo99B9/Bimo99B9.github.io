@@ -5,7 +5,7 @@ excerpt: "Academy is a very complete Linux machine about the new HackTheBox Acad
 date: 2021-01-21
 classes: wide
 header:
-  teaser: /assets/images/htb-writeup-academy/academy-logo.png
+  teaser: /assets/images/htb-writeup-academy/academy_logo.jpg
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
