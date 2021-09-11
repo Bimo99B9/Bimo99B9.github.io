@@ -240,5 +240,5 @@ treatFile("raw.txt")
 
 To use the script, it is mandatory to have installed the `requests` library of Python, which can be installed in Windows with `python3 -m pip install requests` and in Linux with `pip install requests`.
 
-Then, to run it, in a console opened in the folder where the script is located, the will type `python3 autoUniCalendar.py <JSessionID> <RenderToken>`.
+Then, to run it, in a console opened in the folder where the script is located, the user will type `python3 autoUniCalendar.py <JSessionID> <RenderToken>`.
 
