@@ -47,7 +47,7 @@ The response of this request retrieved the general information about the calenda
 
 Therefore, the program needs to make the first request with the Session and Render tokens, and search in the response for the parameters `javax.faces.source`, `javax.faces.ViewState` and `javax.faces.source_SUBMIT`. This is a bit complex as they appear several times with different code structures in the HTTP response. 
 
-The other parameters missing were the start and the end dates of the calendar events. Both are [UNIX timestamps](https://en.wikipedia.org/wiki/Unix_time), so we can modify them to make the server sends us the whole course data, and not only a single week.
+The other parameters missing were the start and the end dates of the calendar events. Both are [UNIX timestamps](https://en.wikipedia.org/wiki/Unix_time), so we can modify them to make the server send us the whole course data, and not only a single week.
 
 The image below shows in the left the POST request with the payload built, and in the right the response generated with all the raw data retrieved.
 
@@ -83,7 +83,7 @@ To end, the script deteles the raw data file, and writes each csv line in a `Cal
 
 ## The script
 
-The written script that makes the first GET request, extracts the cookies, makes the POST request, and converts the raw data into a CSV file, is available in [my own Github](https://github.com/Bimo99B9/autoUniCalendar) and below
+The written script that makes the first GET request, extracts the cookies, makes the POST request, and converts the raw data into a CSV file, is available in [my own Github](https://github.com/Bimo99B9/autoUniCalendar) and below.
 
 ```python
 #!/usr/bin/python3
