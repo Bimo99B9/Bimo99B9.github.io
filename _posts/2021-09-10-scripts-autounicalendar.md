@@ -21,15 +21,19 @@ tags:
 
 ![](/assets/images/scripts-autounicalendar/logo.png)
 
+## autoUniCalendar
+
 **autoUniCalendar**, available in [my own Github](https://github.com/Bimo99B9/autoUniCalendar), is a script which converts the Uniovi calendar into Google and Microsoft calendars by reading the HTTP requests to the web server, and parsing the calendar data into a CSV file readable by every calendar application.
 
-![](/assets/images/scripts-autounicalendar/script.jpg)
+![](/assets/images/scripts-autounicalendar/cat.jpg)
 
 ## How it works
 
 To understand how this script works, it is necessary to understand the process to display the calendar as usual in the SIES web page, so it is possible to replicate every step in a simple Python script.
 
 First of all, the user logs into the intranet. This generates some cookies that the server needs to validate the requests later. Then, the data is processed and displayed in the browser. In the script, we could ask for the credentials and then retrieve the cookies, but we will ask for the cookies directly, so the user security can never be compromised, even though the script is more difficult to run.
+
+![](/assets/images/scripts-autounicalendar/script.jpg)
 
 # The HTTP Requests
 
