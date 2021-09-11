@@ -57,7 +57,8 @@ To do this, we can separate the events with the `{` separator, as each event is 
 
 We still need to treat this data to make it perfectly fit in a CSV file. Then, many more procedures as the ones explained above are applied.
 
-```
+```python
+
 titulo = re.findall('"([^"]*)"', title.split(':')[1])[0]
 tmp = start.split(' ')[1].split('T')[0].removeprefix('"')
 fechainicio = tmp.split('-')[2]+'/'+tmp.split('-')[1]+'/'+tmp.split('-')[0]
@@ -70,6 +71,7 @@ horadealerta = str(int(start.split(' ')[1].split('T')[1].split('+')[0].split(':'
 creador = "Universidad de Oviedo"
 body = description.split('"')[3].replace(r'\n', '')
 csvline = titulo+','+fechainicio+','+horainicio+','+fechafin+','+horafin+',FALSO,FALSO,'+fechadealerta+','+horadealerta+','+creador+',,,,,,'+body+',,,Normal,Falso,Normal,2\n'
+
 ```
 
 # Importing the CSV
@@ -80,7 +82,8 @@ To end, the script deteles the raw data file, and writes each csv line in a `Cal
 
 The written script that makes the first GET request, extracts the cookies, makes the POST request, and converts the raw data into a CSV file, is available in [my own Github](https://github.com/Bimo99B9/autoUniCalendar) and below
 
-```
+```python
+
 #!/usr/bin/python3
 # coding: utf-8
 
@@ -229,6 +232,7 @@ first_request = get_first_request(session, rendermap)
 cookies = extract_cookies(first_request)
 post_second_request(session, rendermap, "true", cookies[0], cookies[1], "1630886400000", "1652054400000", cookies[2])
 treatFile("raw.txt")
+
 ```
 
 ## How to use it
