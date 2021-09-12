@@ -23,7 +23,7 @@ tags:
 
 ## autoUniCalendar
 
-**autoUniCalendar**, available in [my own Github](https://github.com/Bimo99B9/autoUniCalendar), is a script which converts the Uniovi calendar into Google and Microsoft calendars by reading the HTTP requests to the web server, and parsing the calendar data into a CSV file readable by every calendar application.
+**autoUniCalendar**, first posted on [my Twitter](https://twitter.com/Bimo99B9/status/1436034252462755841?s=20), and available in [my Github](https://github.com/Bimo99B9/autoUniCalendar), is a script which converts the Uniovi calendar into Google and Microsoft calendars by reading the HTTP requests to the web server, and parsing the calendar data into a CSV file readable by every calendar application.
 
 ![](/assets/images/scripts-autounicalendar/cat.jpg)
 
