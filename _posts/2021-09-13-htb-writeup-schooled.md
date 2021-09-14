@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Knife - Hack The Box
+title: Schooled - Hack The Box
 excerpt: "The Schooled HackTheBox machine is a Medium FreeBSD system with a Moodle web content manager, very real-life applicable as many school and university systems are configured the same way as this one. From a simple school webpage, you go through student, teacher and manager accounts to finally exploit the system. It also takes advantage of mysql hashed credentials, and misconfigurations in the users accounts."
 date: 2021-09-13
 classes: wide
