@@ -77,11 +77,11 @@ While we are registering we will notice that our email is not valid, but we are 
 
 ![](/assets/images/htb-writeup-schooled/schooled11.png)
 
-Logged in the moodle, is it possible now to enroll to the Mathematics course.
+Logged in the moodle, it is possible now to enroll to the Mathematics course.
 
 ![](/assets/images/htb-writeup-schooled/schooled13.png)
 
-In the announcements pannel of the Maths course, there is a message of the teacher, `Manuel Phillips`. He says he will be checking the profiles of the users that enroll its course.
+In the announcements pannel of the Maths course, there is a message of the teacher, `Manuel Phillips`. He says that he will be checking the profiles of the users that enroll its course.
 
 ![](/assets/images/htb-writeup-schooled/schooled14.png)
 
@@ -91,7 +91,7 @@ We now can only search for vulnerabilities in the Moodle, so we first need to kn
 
 ![](/assets/images/htb-writeup-schooled/schooled15.png)
 
-Searching for exploits for that version, and with the information we had, I found that the moodlenetprofile field of the user was vulnerable to XSS.
+Searching for exploits for that version, and with the information we had, I found that the moodlenetprofile field of the user was vulnerable to Cross Site Scripting (XSS).
 
 ![](/assets/images/htb-writeup-schooled/schooled16.png)
 
