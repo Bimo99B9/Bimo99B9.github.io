@@ -47,7 +47,7 @@ The response of this request retrieved the general information about the calenda
 
 Therefore, the program needs to make the first request with the Session and Render tokens, and search in the response for the parameters `javax.faces.source`, `javax.faces.ViewState` and `javax.faces.source_SUBMIT`. This is a bit complex as they appear several times with different code structures in the HTTP response. 
 
-The other parameters missing were the start and the end dates of the calendar events. Both are [UNIX timestamps](https://en.wikipedia.org/wiki/Unix_time), so we can modify them to make the server send us the whole course data, and not only a single week.
+The other parameters missing were the start and the end dates of the calendar events. Both are [UNIX timestamps](https://en.wikipedia.org/wiki/Unix_time), so we can modify them to make the server send us the whole course data and not only a single week.
 
 The image below shows in the left the POST request with the payload built, and in the right the response generated with all the raw data retrieved.
 
@@ -78,7 +78,7 @@ body = description.split('"')[3].replace(r'\n', '')
 
 # Importing the CSV
 
-To end, the script deteles the raw data file, and writes each csv line in a `Calendar.CSV` file that can be imported in any known calendar application. To do this, you can open your calendar app, and select `import from a file`, and if asked, select `separated with commas`, to indicate that it is a CSV file.
+To end, the script deletes the raw data file, and writes each csv line in a `Calendar.CSV` file that can be imported in any known calendar application. To do this, you can open your calendar app, and select `import from a file`, and if asked, select `separated with commas`, to indicate that it is a CSV file.
 
 ## The script
 
