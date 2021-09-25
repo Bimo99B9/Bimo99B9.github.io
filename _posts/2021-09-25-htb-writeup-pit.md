@@ -5,7 +5,7 @@ excerpt: "Pit is a medium HackTheBox machine that targets SNMP exploitation and 
 date: 2021-09-25
 classes: wide
 header:
-  teaser: /assets/images/htb-writeup-pit/pit_logo.png
+  teaser: /assets/images/htb-writeup-pit/pit_logo.jpg
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
@@ -20,7 +20,7 @@ tags:
   - SELinux
 ---
 
-![](/assets/images/htb-writeup-pit/pit_logo.png)
+![](/assets/images/htb-writeup-pit/pit_logo.jpg)
 
 Pit is a medium HackTheBox machine that targets SNMP exploitation and enumeration. It is enumerated with the public community, and an attack to SeedDMS gives us RCE to gain access to a CentOS control pannel. Some misconfigurations in a bash script which works with SNMP are used to escalate privileges and root this quite complex system.
 
