@@ -67,7 +67,7 @@ With burpsuite we can use this exploit way easier. The hostname of the machine i
 
 ![](/assets/images/htb-writeup-monitors/monitors10.png)
 
-In the ``wp-config.php` there are some credentials. `wpadmin:BestAdministrator@2020!`.
+In the `wp-config.php` there are some credentials. `wpadmin:BestAdministrator@2020!`.
 
 ![](/assets/images/htb-writeup-monitors/monitors12.png)
 
