@@ -162,11 +162,11 @@ Here, we can see that the curly brackets are forbidden... Then, we have to bypas
 
 ![](/assets/images/htb-writeup-spider/spider33.png)
 
-In this first bypass, we can replace `{{ }}` with `{% %}`.
+In this first bypass, we can replace **"{{ }}"** with **"{% %}"**.
 
 ![](/assets/images/htb-writeup-spider/spider34.png)
 
-But again, we are told that `.`, the point, is a forbidden character.
+But again, we are told that **"."**, the point, is a forbidden character.
 
 ![](/assets/images/htb-writeup-spider/spider35.png)
 
@@ -192,11 +192,11 @@ But we finally get a reverse shell in our nc listener!
 
 ## User SSH
 
-We are now user in the system.
+We are now **user** in the system.
 
 ![](/assets/images/htb-writeup-spider/spider41.png)
 
-To make it easier for us, we will get the `chiv` id_rsa, and use it to connect with SSH.
+To make it easier for us, we will get the *chiv* id_rsa, and use it to connect with SSH.
 
 ![](/assets/images/htb-writeup-spider/spider42.png)
 
