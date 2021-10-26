@@ -15,7 +15,7 @@ categories:
 tags:  
   - SSTI
   - Cookie hijacking
-  - SQL
+  - SQL injection
   - XXE
 ---
 
