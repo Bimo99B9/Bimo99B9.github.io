@@ -162,7 +162,7 @@ Here, we can see that the curly brackets are forbidden... Then, we have to bypas
 
 ![](/assets/images/htb-writeup-spider/spider33.png)
 
-In this first bypass, we can replace **"{{ }}"** with **"{% %}"**.
+In this first bypass, we can replace the inner curly brackets of **"{{ }}"** with **"% %"**
 
 ![](/assets/images/htb-writeup-spider/spider34.png)
 
