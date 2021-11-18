@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Seal - Hack The Box
-excerpt: ""
+excerpt: "This system is exploited, after some fuzzing, through a Tomcat manager with path traversal that makes the typical WAR shell a bit more difficult, and lateral movement is performed, as well as privilege escalation, through ansible misconfigurations."
 date: 2021-11-18
 classes: wide
 header:
@@ -21,7 +21,7 @@ tags:
 
 ![](/assets/images/htb-writeup-seal/seal_logo.jpg)
 
-Seal
+This system is exploited, after some fuzzing, through a Tomcat manager with path traversal that makes the typical WAR shell a bit more difficult, and lateral movement is performed, as well as privilege escalation, through ansible misconfigurations.
 
 ## Nmap
 
