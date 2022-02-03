@@ -14,7 +14,7 @@ categories:
   - infosec
 tags:  
   - Linux
-  - tomcat
+  - Tomcat
   - lfi
   - lxd
   - fcrackzip
