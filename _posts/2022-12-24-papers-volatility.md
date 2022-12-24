@@ -19,6 +19,8 @@ tags:
 
 ---
 
+Si quieres descargar el PDF para poder acceder a los enlaces, haz click [aquí](/assets/images/papers-volatility/volatility.pdf).
+
 ![](/assets/images/papers-volatility/volatility1.jpg)
 ![](/assets/images/papers-volatility/volatility2.jpg)
 ![](/assets/images/papers-volatility/volatility3.jpg)
