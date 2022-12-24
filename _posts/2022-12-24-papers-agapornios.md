@@ -21,7 +21,7 @@ tags:
 
 ---
 
-Si quieres descargar el PDF para poder acceder a los enlaces, haz click [aquí](/assets/images/papers-agapornios/agapornios.pdf).
+Si quieres descargar el PDF para poder acceder a los enlaces o para poder copiar y pegar los comandos, haz click [aquí](/assets/images/papers-agapornios/agapornios.pdf).
 
 ![](/assets/images/papers-agapornios/agapornios1.jpg)
 ![](/assets/images/papers-agapornios/agapornios2.jpg)
