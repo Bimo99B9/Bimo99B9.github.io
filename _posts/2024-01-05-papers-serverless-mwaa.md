@@ -7,7 +7,7 @@ classes: wide
 header:
   teaser: /assets/images/data-eng-serverless-mwaa/img7.png
   teaser_home_page: true
-  icon: /assets/images/data-eng-serverless-mwaa/img1.png
+  icon: /assets/images/data-eng-serverless-mwaa/aws-icon.png
 categories:
   - data engineering
   - cloud computing
