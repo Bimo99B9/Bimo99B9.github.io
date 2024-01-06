@@ -5,7 +5,7 @@ excerpt: "The Drive machine is a hard Linux system that needs reverse engineerin
 date: 2024-01-04
 classes: wide
 header:
-  teaser: /assets/images/htb-writeup-drive/drive_logo.jpg
+  teaser: /assets/images/htb-writeup-drive/drive_logo.png
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
@@ -19,7 +19,7 @@ tags:
 
 ---
 
-![](/assets/images/htb-writeup-drive/drive_logo.jpg)
+![](/assets/images/htb-writeup-drive/drive_logo.png)
 
 The Drive machine is a hard Linux system that needs reverse engineering, and performing a SQL injection on a binary.
 
