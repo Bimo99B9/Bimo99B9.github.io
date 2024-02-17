@@ -51,16 +51,16 @@ The complete export and re-import flow is as follows:
 2. GetEnvironment from the AWS SDK retrieves the details of the active environment.
 3. The environment-backup.json object is saved to the backup S3. This file contains the environment configuration, such as Airflow version, configuration options, the S3 path of the environment DAGs, number of workers...
 
-![](/assets/images/data-eng-serverless-mwaa/img7.png)
+   ![](/assets/images/data-eng-serverless-mwaa/img7.png)
 
 4. A token is created for the export DAG.
 5. The StoreMetadata lambda starts the export DAG in the still active environment. This DAG pauses the running DAGs, and exports all Apache Airflow data and variables. If it fails, it reactivates them.
 
-![](/assets/images/data-eng-serverless-mwaa/img9.png)
+   ![](/assets/images/data-eng-serverless-mwaa/img9.png)
 
 6. Environment metadata is exported to S3 in multiple CSVs.
 
-![](/assets/images/data-eng-serverless-mwaa/img11.png)
+   ![](/assets/images/data-eng-serverless-mwaa/img11.png)
 
 7. The export DAG notifies the Step Function of the success.
 8. The environment is removed via the AWS SDK.
