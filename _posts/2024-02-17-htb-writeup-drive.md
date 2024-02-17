@@ -2,7 +2,7 @@
 layout: single
 title: Drive - Hack The Box
 excerpt: "The Drive machine is a hard Linux system that needs reverse engineering, and performing a SQL injection on a binary."
-date: 2024-01-04
+date: 2024-02-17
 classes: wide
 header:
   teaser: /assets/images/htb-writeup-drive/drive_logo.png
