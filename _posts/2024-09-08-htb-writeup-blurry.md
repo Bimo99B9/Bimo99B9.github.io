@@ -10,12 +10,14 @@ header:
   icon: /assets/images/hackthebox.webp
 categories:
   - hackthebox
-  - hard
-  - infosec
+  - medium
+  - machine-learning
+  - cybersecurity
 tags:  
-  - reverse-engineering
-  - ghidra
-  - sql-injection
+  - deserialization
+  - privilege-escalation
+  - clearml
+  - reverse-shell
 
 ---
 
