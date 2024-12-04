@@ -21,7 +21,7 @@ tags:
 
 ![](/assets/images/htb-writeup-blurry/blurry_logo.png)
 
-TODO
+Blurry is a medium-difficulty Hack The Box machine that highlights a vulnerability in ClearML, a popular ML/DL tool. By exploiting insecure pickle deserialization (CVE-2024-24590) and leveraging misconfigurations, attackers can escalate privileges and gain root access, showcasing real-world risks in machine learning environments.
 
 ## System Enumeration
 
