@@ -95,7 +95,7 @@ social:
 analytics:
   provider               : "google" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          : "UA-48984006-2"
+    tracking_id          : "G-HGND463ZJM"
     anonymize_ip         : false # (default)
 
 
@@ -103,9 +103,9 @@ analytics:
 author:
   name             : "Bimo99B9"
   avatar           : "/assets/images/avatar.png"
-  bio              : "HackTheBox pentester. eJPT.<br>Computer engineering and data science student."
-  location         : "Spain"
-  email            : "danilopezgala@gmail.com"
+  bio              : "Cybersecurity at EPFL and ETHZ.<br> CTFs player. Adversarial ML."
+  location         : "Switzerland"
+  email            : "daniel.lopezgala@epfl.ch"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
