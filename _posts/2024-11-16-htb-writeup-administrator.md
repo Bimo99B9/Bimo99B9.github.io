@@ -2,7 +2,7 @@
 layout: single
 title: Administrator - Hack The Box
 excerpt: "Exploring Active Directory vulnerabilities to achieve domain administrator access."
-date: 2024-09-08
+date: 2024-11-16
 classes: wide
 header:
   teaser: /assets/images/htb-writeup-administrator/admin_logo.png
